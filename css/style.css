@@ -1,0 +1,103 @@
+/* color palatte
+FDC921
+FDD85D 
+FFFDF7
+99D6EA
+6798C0
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fdd85d;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: #fffdf7;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box h1 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #333;
+}
+
+.login-box label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color: #333;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #6798c0;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #99d6ea;
+}
+
+.container {
+  background-color: #fffdf7;
+  width: 100%;
+  margin: 50px;
+}
+
+.tab-list {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid;
+}
+
+.tab-list-item {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.tab-list-item:hover {
+  background-color: #99d6ea;
+}
+
+.tab-list-item.active {
+  background-color: #99d6ea;
+}
+
+.tab-content-item {
+  display: none;
+}
+
+.tab-content-item.active {
+  display: block;
+}
