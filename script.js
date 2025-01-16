@@ -1,9 +1,13 @@
+import * as data from "/getData.js";
+
+data.fetchData();
+
 const tabs = document.querySelectorAll("[data-tab-target]");
 const tabContents = document.querySelectorAll(".tab-content-item");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
-    target = document.querySelector(tab.dataset.tabTarget);
+    const target = document.querySelector(tab.dataset.tabTarget);
     tabs.forEach((tab) => {
       tab.classList.remove("active");
     });
@@ -14,3 +18,9 @@ tabs.forEach((tab) => {
     target.classList.add("active");
   });
 });
+
+//Parcel
+
+if (module.hot) {
+  module.hot.accept();
+}

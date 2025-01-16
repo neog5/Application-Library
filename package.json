@@ -1,0 +1,27 @@
+{
+  "name": "application-library",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/neog5/Application-Library#readme",
+  "bugs": {
+    "url": "https://github.com/neog5/Application-Library/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neog5/Application-Library.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "scripts/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.10"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.13.3"
+  }
+}

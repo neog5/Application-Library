@@ -3,18 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Sign-up</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="scripts/script.js" async></script>
+    <script type="module" src="script.js" async></script>
   </head>
   <body>
-    <div class="box login-box">
-      <h1>Login</h1>
+    <div class="box signup-box">
+      <h1>Sign-up</h1>
       <label for="email">Email</label>
       <input type="email" name="email" placeholder="name@email.com" />
       <label for="password">Password</label>
       <input type="password" name="password" placeholder="password" />
-      <button id="login-btn">Login</button>
+      <label for="password">Confirm Password</label>
+      <input type="password" name="confirm-pass" placeholder="password" />
+      <div id="pass-match-warn">Passwords don't match</div>
+      <button id="signup-btn">Sign-up</button>
     </div>
   </body>
 </html>
