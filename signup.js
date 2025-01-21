@@ -3,12 +3,11 @@ import { signUp } from "./userAuth";
 const signUpBtn = document.querySelector("#signup-btn");
 
 signUpBtn.addEventListener("click", () => {
-  let email = document.getElementsByName("email")[0].values;
-  let password = document.getElementsByName("password")[0].values;
-  let confirmPass = document.getElementsByName("confirm-pass")[0].values;
-
-  if (!checkPasswords) {
-    document.getElementById("pass-match-warn").classList.add(".active");
+  let email = document.getElementsByName("email")[0].value;
+  let password = document.getElementsByName("password")[0].value;
+  let confirmPass = document.getElementsByName("confirm-pass")[0].value;
+  if (!checkPasswords(password, confirmPass)) {
+    document.querySelector(".pass-match-warn").classList.add("active");
     return;
   }
 
@@ -17,5 +16,6 @@ signUpBtn.addEventListener("click", () => {
 });
 
 const checkPasswords = function (password, confirmPass) {
+  if (!password) return false;
   return password === confirmPass;
 };

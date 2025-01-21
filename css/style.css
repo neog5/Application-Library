@@ -110,6 +110,11 @@ td {
   border-collapse: collapse;
 }
 
-#pass-match-warn {
+.pass-match-warn {
   color: red;
+  display: none;
+}
+
+.pass-match-warn.active {
+  display: block;
 }
