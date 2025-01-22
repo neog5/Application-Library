@@ -1,36 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Application List</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="script.js" defer></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="tab-list">
-        <div class="tab-list-item active" data-tab-target="#my-app">
-          My Applications
-        </div>
-        <div class="tab-list-item" data-tab-target="#friend-app">
-          Friend's Applications
-        </div>
-        <div class="tab-list-item" data-tab-target="#friend-list">
-          Manage Friend
-        </div>
-      </div>
-      <div class="tab-content">
-        <div class="tab-content-item active" id="my-app">
-          <h1>My Applications List</h1>
-        </div>
-        <div class="tab-content-item" id="friend-app">
-          <h1>Friend's Application List</h1>
-        </div>
-        <div class="tab-content-item" id="friend-list">
-          <h1>All My Friends</h1>
-        </div>
-      </div>
-    </div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Application List</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="module" src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- navigation added -->
+			<div class="navbar">
+				<div class="nav-buttons">
+					<!-- Sign Up and Login buttons -->
+					<button id="signup-btn" class="auth-btn">Sign Up</button>
+					<button id="login-btn" class="auth-btn">Login</button>
+					<!-- Logout button -->
+					<button id="logout-btn" class="auth-btn hidden">Logout</button>
+				</div>
+			</div>
+			<!--  -->
+			<div class="tab-list">
+				<div class="tab-list-item active" data-tab-target="#my-app">
+					My Applications
+				</div>
+				<div class="tab-list-item" data-tab-target="#friend-app">
+					Friend's Applications
+				</div>
+				<div class="tab-list-item" data-tab-target="#friend-list">
+					Manage Friend
+				</div>
+			</div>
+			<div class="tab-content">
+				<div class="tab-content-item active" id="my-app">
+					<h1>My Applications List</h1>
+				</div>
+				<div class="tab-content-item" id="friend-app">
+					<h1>Friend's Application List</h1>
+				</div>
+				<div class="tab-content-item" id="friend-list">
+					<h1>All My Friends</h1>
+				</div>
+			</div>
+		</div>
+		<script>
+			// JavaScript for managing authentication buttons
+			const signupBtn = document.getElementById('signup-btn');
+			const loginBtn = document.getElementById('login-btn');
+			const logoutBtn = document.getElementById('logout-btn');
+
+			// Check login status from localStorage
+			const isLoggedIn = localStorage.getItem('userId');
+
+			// Show/Hide buttons based on login status
+			if (isLoggedIn) {
+				signupBtn.classList.add('hidden');
+				loginBtn.classList.add('hidden');
+				logoutBtn.classList.remove('hidden');
+			} else {
+				signupBtn.classList.remove('hidden');
+				loginBtn.classList.remove('hidden');
+				logoutBtn.classList.add('hidden');
+			}
+
+			// Event listeners
+			signupBtn.addEventListener('click', () => {
+				window.location.href = '/signup.html'; // Redirect to signup page
+			});
+
+			loginBtn.addEventListener('click', () => {
+				window.location.href = '/login.html'; // Redirect to login page
+			});
+
+			logoutBtn.addEventListener('click', () => {
+				localStorage.clear(); // Clear localStorage
+				alert('You have been logged out.');
+				window.location.reload(); // Reload page to update buttons
+			});
+		</script>
+	</body>
 </html>

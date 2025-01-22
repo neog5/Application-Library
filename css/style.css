@@ -7,114 +7,118 @@ FFFDF7
 */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #fdd85d;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #fdd85d;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 .box {
-  background-color: #fffdf7;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+	background-color: #fffdf7;
+	padding: 20px 30px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 400px;
 }
 
 .box h1 {
-  margin-bottom: 16px;
-  font-size: 24px;
-  color: #333;
+	margin-bottom: 16px;
+	font-size: 24px;
+	color: #333;
 }
 
 .box label {
-  display: block;
-  margin-bottom: 4px;
-  font-weight: bold;
-  color: #333;
+	display: block;
+	margin-bottom: 4px;
+	font-weight: bold;
+	color: #333;
 }
 
 .box input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 16px;
 }
 
 .box button {
-  width: 100%;
-  padding: 10px;
-  background-color: #6798c0;
-  color: white;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+	width: 100%;
+	padding: 10px;
+	background-color: #6798c0;
+	color: white;
+	border: none;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 .box button:hover {
-  background-color: #99d6ea;
+	background-color: #99d6ea;
 }
 
 .container {
-  background-color: #fffdf7;
-  width: 100%;
-  margin: 50px;
+	background-color: #fffdf7;
+	width: 100%;
+	margin: 50px;
 }
 
 .tab-list {
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid;
+	display: flex;
+	justify-content: space-around;
+	border-bottom: 1px solid;
 }
 
 .tab-list-item {
-  font-weight: bold;
-  cursor: pointer;
-  padding: 4px;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 4px;
 }
 
 .tab-list-item:hover {
-  background-color: #99d6ea;
+	background-color: #99d6ea;
 }
 
 .tab-list-item.active {
-  background-color: #99d6ea;
+	background-color: #99d6ea;
 }
 
 .tab-content-item {
-  display: none;
+	display: none;
 }
 
 .tab-content-item.active {
-  display: block;
+	display: block;
 }
 
 .tab-content-item table,
 th,
 td {
-  border: 1px solid;
-  padding: 2px;
-  border-collapse: collapse;
+	border: 1px solid;
+	padding: 2px;
+	border-collapse: collapse;
 }
 
 .pass-match-warn {
-  color: red;
-  display: none;
+	color: red;
+	display: none;
 }
 
 .pass-match-warn.active {
-  display: block;
+	display: block;
+}
+
+.hidden {
+	display: none;
 }
