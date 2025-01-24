@@ -14,6 +14,10 @@ export const fetchData = async function () {
   } else {
     console.log(application_records);
     createTableFromQueryResult(application_records);
+    const friendsID = await getFriends();
+    console.log(await friendsID);
+    const friends_emails = await getFriendsEmails();
+    console.log(await friends_emails);
   }
   return application_records;
 };
@@ -62,3 +66,25 @@ function createTableFromQueryResult(queryResult) {
   // Add the table to the container
   tableContainer.appendChild(table);
 }
+
+//Get Friends
+let getFriends = async function () {
+  let { data: friendships, error } = await supabase
+    .from("friendships")
+    .select("user_2")
+    .eq("user_1", userAuth.user);
+
+  if (error) {
+    return error;
+  }
+
+  return friendships;
+};
+
+let getFriendsEmails = async function (friendIds) {
+  let { data, error } = await supabase.rpc("get_user_emails", {
+    friendIds,
+  });
+  if (error) console.error(error);
+  else console.log(data);
+};
