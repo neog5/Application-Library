@@ -2,14 +2,14 @@ import { supabase } from "/connectClient.js";
 
 // export const user = '2b8e9bbe-e284-430f-a265-b94fed725c3a';
 
-export const signUp = async function (email, password) {
+export const signUp = async function (firstName, lastName, email, password) {
   let { data, error } = await supabase.auth.signUp({
     email: email,
     password: password,
     options: {
       data: {
-        first_name: "Het",
-        last_name: "Patel",
+        first_name: firstName,
+        last_name: lastName,
       },
     },
   });

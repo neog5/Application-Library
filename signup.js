@@ -3,6 +3,8 @@ import { signUp } from "./userAuth";
 const signUpBtn = document.querySelector("#signup-btn");
 
 signUpBtn.addEventListener("click", async () => {
+  let firstName = document.getElementsByName("first-name")[0].value;
+  let lastName = document.getElementsByName("last-name")[0].value;
   let email = document.getElementsByName("email")[0].value;
   let password = document.getElementsByName("password")[0].value;
   let confirmPass = document.getElementsByName("confirm-pass")[0].value;
@@ -15,7 +17,7 @@ signUpBtn.addEventListener("click", async () => {
   // return;
 
   try {
-    const response = await signUp(email, password);
+    const response = await signUp(firstName, lastName, email, password);
     console.log(response);
     if (response.user?.aud === "authenticated") {
       window.location.href = "http://localhost:1234/"; // Navigate to homepage
